@@ -1,0 +1,43 @@
+<!-- 
+  START OF CUSTOM NAVIGATION
+  This nav block adds links to your site.
+-->
+<nav>
+  <a href="{{ '/' | relative_url }}">Home (SOP)</a>
+  <a href="{{ '/research' | relative_url }}">Detailed Research</a>
+  <a href="{{ '/assets/Andrew_Morgan_Resume.pdf' | relative_url }}">Resume (PDF)</a>
+</nav>
+<style>
+  /* Simple styling for the new nav */
+  header nav {
+    margin-top: 10px;
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+  }
+  header nav a {
+    display: inline-block;
+    margin-right: 20px;
+    color: #0076c0; /* A standard link blue */
+    font-weight: bold;
+    text-decoration: none;
+  }
+  header nav a:hover {
+    text-decoration: underline;
+  }
+</style>
+<!-- END OF CUSTOM NAVIGATION -->
+
+{% if site.github.is_project_page %}
+  <span class="btn-octicon"><a href="{{ site.github.repository_url }}" target="_blank"><span class="octicon octicon-mark-github"></span></a></span>
+{% endif %}
+
+{% if site.github.is_user_page %}
+  <span class="btn-octicon"><a href="{{ site.github.owner_url }}" target="_blank"><span class="octicon octicon-mark-github"></span></a></span>
+{% endif %}
+
+{% if site.show_downloads %}
+  <section id="downloads">
+    <a href="{{ site.github.zip_url }}" class="btn">Download as .zip</a>
+    <a href="{{ site.github.tar_url }}" class="btn">Download as .tar.gz</a>
+  </section>
+{% endif %}
