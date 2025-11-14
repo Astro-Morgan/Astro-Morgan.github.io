@@ -1,11 +1,13 @@
+---
 layout: default
 title: Detailed Research Proposal
+---
 
-Detailed Research Proposal: AEON-Flow Framework
+# Detailed Research Proposal: AEON-Flow Framework
 
 This page provides the technical supplement to my main Statement of Purpose, detailing the specific model architectures, mathematical frameworks, and validation stages of my proposed doctoral research.
 
-Tier 1: The 'Aristotle'+'Kanon Flow' Anomaly Detection Instrument
+## Tier 1: The 'Aristotle'+'Kanon Flow' Anomaly Detection Instrument
 
 The foundation of the entire framework is the high-fidelity, 190M-parameter teacher model, 'Plato'. This is a multi-headed pooling transformer designed to fuse two data modalities:
 
@@ -23,7 +25,7 @@ This powerful latent space serves the first tier, my current production-scale to
 
 This system serves as a probabilistic "afterburner" for traditional template-fitting pipelines (e.g., Redrock). By adapting the proven autoencoder+flow architecture for anomaly detection, it can robustly identify improbable redshifts and novel spectral anomalies by assigning a precise log-likelihood to any given spectrum.
 
-Tier 2: PhD Core Proposal — The 'Panta Rhei' Evolutionary Model
+## Tier 2: PhD Core Proposal — The 'Panta Rhei' Evolutionary Model
 
 This validated 'Aristotle'+'Kanon Flow' framework serves as the foundation for the second tier of my project and the core of my PhD: the scientific instrument 'Panta Rhei'.
 
@@ -45,10 +47,10 @@ where $\sigma(\phi,z)$ is the diffusion term that quantifies the unbiased, mean-
 
 Having this full SDE allows us to move beyond simple trajectory inference and apply the rigorous mathematics of large deviation theory, specifically the Freidlin-Wentzell formulation. This framework provides the Onsager-Machlup action functional, a foundational tool from 1950s statistical physics that formally defines and solves for the "most probable path" an object will take through a stochastic state space. My proposed thesis is therefore a two-stage validation and calibration of this full framework, designed to build and test this action functional against cosmological simulations.
 
-Stage 1: Deterministic Validation
+### Stage 1: Deterministic Validation
 
 The first stage is a pure validation of the deterministic WFR-FM core. I will train on the full simulation snapshot data to learn $f_{\text{model}}$ and $g_{\text{model}}$. I will then validate this by comparing them against the ground-truth $f_{\text{sim}}$ (mean path) and $g_{\text{sim}}$ (source/sink rate) measured directly from the simulation merger trees. This "pure math" test validates the core method.
 
-Stage 2: Stochastic Calibration
+### Stage 2: Stochastic Calibration
 
 The second, more advanced stage is to empirically calibrate the stochastic component, $\sigma(\phi,z)$. To do this, I will leverage the unified latent space by forming an observationally-matched simulation sub-sample through nearest-neighbor matching to the real DESI data. I will then use this simulation analog sample to measure the local scatter (the variance) of individual galaxy paths around the now-validated deterministic flow $f$. This will provide the first data-driven calibration for $\sigma(\phi,z)$, allowing for a full, probabilistic application of the Freidlin-Wentzell formulation to galaxy evolution.
