@@ -37,7 +37,7 @@ A drift $f(\phi,z)$ (the 'average' evolutionary path)
 
 A source/sink term $g(\phi,z)$ (population birth/death)
 
-The Full Stochastic Model and Validation
+#### The Full Stochastic Model and Validation
 
 The path of an individual galaxy, however, is governed by the full Stochastic Differential Equation (SDE):
 
